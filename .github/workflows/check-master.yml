@@ -21,7 +21,7 @@ jobs:
         run: |
           git config user.name 'Update-a-Bot'
           git config user.email 'insights@redhat.com'
-          git add .baseimagedigest
+          git add .commitsha
           git commit -m "chore(master): update and rebuild on new master commit" || echo "No new changes"
       - name: Create pull request
         uses: peter-evans/create-pull-request@v6
